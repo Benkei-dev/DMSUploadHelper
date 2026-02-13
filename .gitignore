@@ -1,0 +1,19 @@
+# PyInstaller build artifacts
+build/
+dist/
+*.spec
+build.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Config & logs (user-generated)
+dms_vorbereitung_config.json
+NichtUploadfaehig_Log_*.txt
+_NichtUploadfaehig/
+
+# IDE
+.vscode/
+.idea/

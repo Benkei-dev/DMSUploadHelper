@@ -2,42 +2,46 @@
 
 ## Auf einem anderen Rechner verwenden
 
-### 1. Repository klonen
-```bash
-git clone https://github.com/Benkei-dev/DMSUploadHelper.git
-cd DMSUploadHelper
-```
+### 1. EXE herunterladen
 
-### 2. Python prüfen
-Das Tool benötigt **Python 3.10 oder höher**.
+**Download:** [DMS-Upload-Vorbereitung.exe (v1.0)](https://github.com/Benkei-dev/DMSUploadHelper/releases/latest)
 
-Prüfen:
-```bash
-python --version
-```
+Die fertige EXE kann direkt ausgeführt werden – **keine Installation nötig, kein Python nötig**.
 
-Falls Python fehlt: https://www.python.org/downloads/
+### 2. Tool starten
 
-### 3. Tool starten
-```bash
-python main.py
-```
+Einfach Doppelklick auf die EXE → das GUI-Fenster öffnet sich.
 
-Das GUI-Fenster öffnet sich automatisch.
+### 2. Tool starten
 
-### 4. Verwendung
+Einfach Doppelklick auf die EXE → das GUI-Fenster öffnet sich.
+
+### 3. Verwendung
 1. **Quellordner auswählen** – Der Ordner, dessen Dateien analysiert werden sollen
 2. **Zielbasis auswählen** (optional) – Wohin nicht-uploadfähige Dateien verschoben werden. Standard: `_NichtUploadfaehig` im Quellordner
 3. **Trockenlauf** aktivieren für eine Vorschau ohne Dateioperationen
 4. **Analyse starten** klicken
 
-### 5. EXE erstellen (optional – für Rechner ohne Python)
+---
+
+## Für Entwickler: EXE selbst bauen
+
+Falls du die EXE selbst erstellen oder den Code anpassen willst, brauchst du **Python 3.10+**.
+
 ```bash
+# Repository klonen
+git clone https://github.com/Benkei-dev/DMSUploadHelper.git
+cd DMSUploadHelper
+
+# Direkt starten (zum Testen)
+python main.py
+
+# EXE bauen
 pip install pyinstaller
 pyinstaller --onefile --windowed --name "DMS-Upload-Vorbereitung" main.py
 ```
 
-Die fertige EXE liegt in `dist/DMS-Upload-Vorbereitung.exe` und kann ohne Python-Installation ausgeführt werden.
+Die fertige EXE liegt dann in `dist/DMS-Upload-Vorbereitung.exe`.
 
 ## Konfiguration anpassen
 
